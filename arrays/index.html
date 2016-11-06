@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<form>
+				<div class="form-group">
+					<label for="carro">Carro</label>
+					<input id="carro"  type="text" class="form-control" placeholder="Carro">
+				</div>
+				<div class="form-group">
+					<label for="preco">Preço</label>
+					<input id="preco"  type="text" class="form-control" placeholder="Preço">
+				</div>
+
+				<button id="btn-adiciona" type="submit" class="btn btn-primary">Salvar</button>
+			</form>
+
+		</div>
+		<table class="table table-hover">
+  			
+		</table>
+	</div>
+	<script src="arrays.js"></script>
+	<script>
+		 document.querySelector("#btn-adiciona").addEventListener("click",function(e){
+		 	e.preventDefault();
+		 	var carro = {
+		 		carro:document.querySelector("#carro").value,
+		 		preco:document.querySelector("#preco").value
+		 	}
+		 	addSplice(carro);
+		 	document.querySelector("form").reset();		 	
+		 });
+	</script>
+</body>
+</html>
