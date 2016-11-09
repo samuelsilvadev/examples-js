@@ -37,6 +37,11 @@ window.onload = function(){
 		validarTelefoneTest(/^\([0-9]{2}\) [0-9]{4,5}-?[0-9]{4}$/, "telefone-passo-7");
 	});
 
+	document.querySelector("#btn-passo-9").addEventListener("click", function(e){
+		e.preventDefault();
+		validarTelefoneTest(/^\(\d2}\)\s\d{4,5}-?\d{4}$/, "telefone-passo-9");
+	});
+
 }
 
 /*exec*/
