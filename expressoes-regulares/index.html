@@ -8,103 +8,26 @@
 </head>
 <body>
 	<div class="container">
-
-		<ul class="nav nav-tabs" id="myTabs">
-		  <li role="presentation" class="active"><a href="#passo1" aria-controls="passo1">Passo 1</a></li>
-		  <li role="presentation"><a href="#passo2" aria-controls="passo2">Passo 2</a></li>
-		  <li role="presentation"><a href="#passo3">Passo 3</a></li>
-		  <li role="presentation"><a href="#passo4">Passo 4</a></li>
-		  <li role="presentation"><a href="#passo5">Passo 5</a></li>
-		  <li role="presentation"><a href="#passo6">Passo 6</a></li>
-		  <li role="presentation"><a href="#passo7">Passo 7</a></li>
-		  <li role="presentation"><a href="#passo8">Passo 8</a></li>
-		  <li role="presentation"><a href="#passo9">Passo 9</a></li>
-		  <li role="presentation"><a href="#passo10">Passo 10</a></li>
-		  <li role="presentation"><a href="#passo11">Passo 11</a></li>
-		  <li role="presentation"><a href="#passo12">Passo 12</a></li>
-		</ul>
-		<form>
-			<div class="tab-content">
-				
-				<div role="tabpanel" class="tab-pane active" id="passo1">
-					<h1>Passo 1</h1>
-					<input id="telefone-passo-1" type="text"/>
-					<button id="btn-passo-1" class="btn">Validar</button>
-				</div>
-
-				<div role="tabpanel" class="tab-pane" id="passo2">
-					<h1>Passo 2</h1>
-					<input id="telefone-passo-2" type="text"/>
-					<button id="btn-passo-2" class="btn">Validar</button>
-				</div>
-
-				<div role="tabpanel" class="tab-pane" id="passo3">
-					<h1>Passo 3</h1>
-					<input id="telefone-passo-3" type="text"/>
-					<button id="btn-passo-3" class="btn">Validar</button>
-				</div>
-
-				<div role="tabpanel" class="tab-pane" id="passo4">
-					<h1>Passo 4</h1>
-					<input id="telefone-passo-4" type="text"/>
-					<button id="btn-passo-4" class="btn">Validar</button>
-				</div>
-
-				<div role="tabpanel" class="tab-pane" id="passo5">
-					<h1>Passo 5</h1>
-					<input id="telefone-passo-5" type="text"/>
-					<button id="btn-passo-5" class="btn">Validar</button>
-				</div>
-
-				<div role="tabpanel" class="tab-pane" id="passo6">
-					<h1>Passo 6</h1>
-					<input id="telefone-passo-6" type="text"/>
-					<button id="btn-passo-6" class="btn">Validar</button>
-				</div>
-
-				<div role="tabpanel" class="tab-pane" id="passo7">
-					<h1>Passo 7</h1>
-					<input id="telefone-passo-7" type="text"/>
-					<button id="btn-passo-7" class="btn">Validar</button>
-				</div>
-
-				<div role="tabpanel" class="tab-pane" id="passo8">
-					<h1>Passo 8</h1>
-					<input id="telefone-passo-8" type="text"/>
-					<button id="btn-passo-8" class="btn">Validar</button>	
-				</div>
-
-				<div role="tabpanel" class="tab-pane" id="passo9">
-					<h1>Passo 9</h1>
-					<input id="telefone-passo-9" type="text"/>
-					<button id="btn-passo-9" class="btn">Validar</button>
-				</div>
-
-				<div role="tabpanel" class="tab-pane" id="passo10">
-				</div>
-
-				<div role="tabpanel" class="tab-pane" id="passo11">
-				</div>
-
-				<div role="tabpanel" class="tab-pane" id="passo12">
-				</div>
-			</div>
-		</form>
-</div>
+		 <form>
+		 	<div class="row">
+			 	<div class="col-md-12">
+			 		<label for="regExp">RegExp</label>
+			 		<input id="regExp" type="text" name="regExp" class="form-control">
+			 	</div>
+			 	<div class="col-md-12">
+		 			<label for="valorDeTeste">Valor de teste</label>
+		 			<input id="valorDeTeste" type="text" name="valorDeTeste" class="form-control">
+		 		</div>
+		 	</div><br>
+		 	<div class="row">
+			 	<div class="col-md-1">
+			 		<button id="validaRegExp" class="btn btn-primary">Testar</button>
+			 	</div>
+		 	</div>
+		 </form>
+	</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="expressoes-regulares.js"></script>
-<script type="text/javascript">
-	document.querySelector("#myTabs a").addEventListener('click', function(e){
-			e.preventDefault();
-		console.log(this);
-	
-	});
-	
-	$('#myTabs a').click(function (e) {
-  		e.preventDefault();
-  		$(this).tab('show')
-	});
-</script>
 </body>
 </html>
