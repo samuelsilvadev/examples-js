@@ -1,0 +1,24 @@
+{
+  "name": "examples-js",
+  "homepage": "https://github.com/samuelsilvadev/examples-js",
+  "description": "project of examples in javascript",
+  "main": "",
+  "keywords": [
+    "javascript",
+    "arrys"
+  ],
+  "authors": [
+    "samuel silva"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
