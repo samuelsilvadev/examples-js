@@ -2,17 +2,43 @@
 <html>
 <head>
 	<title>Learning Js</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="lib/components/bootstrap/dist/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Nunito:200" rel="stylesheet">
 	<style type="text/css">
+		*{
+			font-family: 'Nunito', sans-serif;
+		}
 		body{
 			background-color: #DCDCDC;
 		}
 		a{
 			color:#000;
 		}
-		.box{
-			height:80px; border-radius:5px;  display: flex; justify-content: center;
+
+		a:hover{
+			cursor: pointer;
+			color:#000;
+			text-decoration: none
 		}
+
+		.box{
+			height:200px;
+			border-radius:8px;
+			display: flex;
+			justify-content: center;
+			-webkit-transition: width 500s ease-out 1s;
+			-moz-transition: width 500s ease-out 1s;
+			-o-transition: width 500s ease-out 1s;
+    		transition: width 500s ease-out 1s;
+		}
+
+		.box:hover {
+			cursor: pointer;
+		    width: 300px;
+		    background-color:yellow;
+		}
+
+
 	</style>
 </head>
 <body>
