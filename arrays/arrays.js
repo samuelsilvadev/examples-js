@@ -15,7 +15,10 @@ function addSplice(carro){
 }
 
 function update(indice){
-	//carros.splice(carros., 0, carro);
+	let carroParaAtualizar = carros[indice];
+	document.querySelector("#carro").value = carroParaAtualizar.carro;
+	document.querySelector("#preco").value = carroParaAtualizar.preco;
+	//carros.splice(indice, 1, carro);
 	log(indice);
 }
 
