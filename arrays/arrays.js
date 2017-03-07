@@ -20,8 +20,10 @@ function update(indice){
 }
 
 function remove(indice){
-	carros.splice(indice, 1);
-	atualizaTabela();
+	if(confirm("Deseja Deletar")){
+		carros.splice(indice, 1);
+		atualizaTabela();
+	}
 }
 
 function atualizaTabela(){
