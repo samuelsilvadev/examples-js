@@ -23,6 +23,7 @@
 	<div class="container">
 		<div class="jumbotron">
 			<form>
+				<input id="indice" type="hidden">
 				<div class="form-group">
 					<label for="carro">Carro</label>
 					<input id="carro"  type="text" class="form-control" placeholder="Carro">
@@ -53,8 +54,13 @@
 		 	document.querySelector("form").reset();
 		});
 		
-		document.querySelector("#btn-atualiza").addEventListener("click", (e) => {
-
+		document.querySelector("#btn-atualiza").addEventListener("click", function(e){
+			e.preventDefault();
+		 	var carro = {
+		 		carro:document.querySelector("#carro").value,
+		 		preco:document.querySelector("#preco").value
+		 	}
+		 	update(document.querySelector("#indice").value, carro);
 		});
 	</script>
 </body>

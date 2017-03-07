@@ -14,12 +14,11 @@ function addSplice(carro){
 	}
 }
 
-function update(indice){
-	let carroParaAtualizar = carros[indice];
-	document.querySelector("#carro").value = carroParaAtualizar.carro;
-	document.querySelector("#preco").value = carroParaAtualizar.preco;
-	//carros.splice(indice, 1, carro);
+function update(indice, carro){
 	log(indice);
+	log(carro);
+	carros.splice(indice, 1, carro);
+	atualizaTabela();
 }
 
 function remove(indice){
@@ -40,7 +39,7 @@ function percorre(){
 					'<td>'+(i+1)+'</td>'+
 					'<td>'+carros[i].carro+'</td>'+
 					'<td>'+carros[i].preco+'</td>'+
-					'<td><span class="change-cursor label label-warning" onclick="update('+i+')">Alterar</span><span class="change-cursor label label-danger" onclick="remove('+i+')">Excluir</span></td>'+
+					'<td><span class="change-cursor label label-warning" onclick="preparaParaAtualizar('+i+')">Alterar</span><span class="change-cursor label label-danger" onclick="remove('+i+')">Excluir</span></td>'+
 				'</tr>';
 	}
 	return html;
@@ -60,4 +59,13 @@ function percorreForEach(){
 
 function log(mensagem){
 	console.log(mensagem);
+}
+
+function preparaParaAtualizar(indice){
+	let carroParaAtualizar = carros[indice];
+	document.querySelector("#btn-adiciona").style.display = "none";
+	document.querySelector("#btn-atualiza").style.display = "inline-block";
+	document.querySelector("#carro").value = carroParaAtualizar.carro;
+	document.querySelector("#preco").value = carroParaAtualizar.preco;
+	document.querySelector("#indice").value = indice;
 }
