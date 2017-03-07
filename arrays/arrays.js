@@ -15,6 +15,7 @@ function addSplice(carro){
 }
 
 function update(indice){
+	//carros.splice(carros., 0, carro);
 	log(indice);
 }
 
@@ -34,7 +35,7 @@ function percorre(){
 					'<td>'+(i+1)+'</td>'+
 					'<td>'+carros[i].carro+'</td>'+
 					'<td>'+carros[i].preco+'</td>'+
-					'<td><span class="label label-warning" onclick="update('+i+')">Alterar</span><span class="label label-danger" onclick="remove('+i+')">Excluir</span></td>'+
+					'<td><span class="change-cursor label label-warning" onclick="update('+i+')">Alterar</span><span class="change-cursor label label-danger" onclick="remove('+i+')">Excluir</span></td>'+
 				'</tr>';
 	}
 	return html;
