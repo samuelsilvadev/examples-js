@@ -7,6 +7,9 @@
 		.change-cursor{
 			cursor: pointer;
 		}
+		#btn-atualiza{
+			display: none;
+		}
 	</style>
 </head>
 <body>
@@ -29,7 +32,8 @@
 					<input id="preco"  type="text" class="form-control" placeholder="Preço">
 				</div>
 
-				<button id="btn-adiciona" type="submit" class="btn btn-primary">Salvar</button>
+				<button id="btn-adiciona" type="submit" class="btn btn-primary" title="Salvar dados">Salvar</button>
+				<button id="btn-atualiza" type="submit" class="btn btn-primary" title="Atualizar dados">Salvar</button>
 			</form>
 
 		</div>
@@ -39,7 +43,7 @@
 	</div>
 	<script src="arrays.js"></script>
 	<script>
-		 document.querySelector("#btn-adiciona").addEventListener("click",function(e){
+		document.querySelector("#btn-adiciona").addEventListener("click",function(e){
 		 	e.preventDefault();
 		 	var carro = {
 		 		carro:document.querySelector("#carro").value,
@@ -47,7 +51,11 @@
 		 	}
 		 	addSplice(carro);
 		 	document.querySelector("form").reset();
-		 });
+		});
+		
+		document.querySelector("#btn-atualiza").addEventListener("click", (e) => {
+
+		});
 	</script>
 </body>
 </html>
