@@ -46,22 +46,22 @@
 	<script>
 		document.querySelector("#btn-adiciona").addEventListener("click",function(e){
 		 	e.preventDefault();
-		 	var carro = {
-		 		carro:document.querySelector("#carro").value,
-		 		preco:document.querySelector("#preco").value
-		 	}
-		 	addSplice(carro);
+		 	addSplice(getObjeto());
 		 	document.querySelector("form").reset();
 		});
 		
 		document.querySelector("#btn-atualiza").addEventListener("click", function(e){
 			e.preventDefault();
-		 	var carro = {
-		 		carro:document.querySelector("#carro").value,
-		 		preco:document.querySelector("#preco").value
-		 	}
-		 	update(document.querySelector("#indice").value, carro);
+		 	update(document.querySelector("#indice").value, getObjeto());
+		 	document.querySelector("form").reset();
 		});
+
+		function getObjeto(){
+			return {
+				carro:document.querySelector("#carro").value,
+		 		preco:document.querySelector("#preco").value
+			}
+		}
 	</script>
 </body>
 </html>

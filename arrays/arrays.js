@@ -15,8 +15,6 @@ function addSplice(carro){
 }
 
 function update(indice, carro){
-	log(indice);
-	log(carro);
 	carros.splice(indice, 1, carro);
 	atualizaTabela();
 }
