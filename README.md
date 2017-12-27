@@ -2,6 +2,6 @@
 
 Projeto usado para reforçar conceitos através de exemplos práticos
 
-##Instalação
+## Instalação
 
 bower install
